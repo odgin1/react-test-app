@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import Form from './components/Form';
+import UserGreetingConditionalRendering from './components/UserGreetingConditionalRendering';
+import Search from './components/ShowElement';
+import TestButton from './materialUI/TestButton';
+import Select from './materialUI/Select';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render(){
+    return (
+      <div className="App">
+
+        <br/>===================================
+        <br/>Form handling
+        <br/>===================================
+        <Form />
+
+        <br/>===================================
+        <br/>Conditional Rendering
+        <br/>===================================
+        <UserGreetingConditionalRendering/>
+
+        <br/>===================================
+        <br/>Show Element
+        <br/>===================================
+        <Search/>
+
+        <br/>===================================
+        <br/>Material-UI Test Button
+        <br/>===================================
+        <br/><TestButton/>
+
+        <br/>===================================
+        <br/>Material-UI Select
+        <br/>===================================
+        <br/><Select/>
+
+      </div>
+    )
+  }
 }
 
 export default App;
